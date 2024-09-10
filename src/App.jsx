@@ -6,6 +6,7 @@ import SectionHead from './section-head'
 import SectionDisp from './section-disponible'
 import Footer from './components/footer'
 import Terms from './components/termsCond'
+import Calendar from './section-Calendar'
 
 function App() {
   const [count, setCount] = useState(0)
