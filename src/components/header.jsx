@@ -10,7 +10,7 @@ function Header() {
 
   return (
     <nav>
-      <div>logo</div>
+      <div>Moto2GoCentral</div>
       {/* Botão para abrir o overlay */}
       <span className='menu' onClick={openNav} style={{ cursor: 'pointer' }}>&#9776;</span>
 

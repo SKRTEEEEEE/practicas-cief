@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 //import './Slideshow.css';  // Certifique-se de ter o arquivo CSS
 
 const images = [
-  { src: '../img/img1.jpg', caption: 'Caption Text' },
-  { src: '../img/img4.jpg', caption: 'Caption Four' },
-  { src: '../img/img2.jpg', caption: 'Caption Two' },
-  { src: '../img/img3.jpg', caption: 'Caption Three' },
+  { src: '../img/img1.avif', caption: 'Caption Text' },
+  { src: '../img/img4.avif', caption: 'Caption Four' },
+  { src: '../img/img2.avif', caption: 'Caption Two' },
+  { src: '../img/img3.avif', caption: 'Caption Three' },
 ];
 
 function Slideshow() {
