@@ -215,7 +215,7 @@ footer{
     display: flex;
 
 
-    background-color: #818181;
+    background-color: #e3e3e3;
 }
 .about{
     height: 100%;
@@ -231,7 +231,7 @@ footer{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: cadetblue;
+    background-color: rgba(211, 192, 243, 0.551);
 }
 .menu-footer{
     height: 100%;
@@ -345,5 +345,40 @@ footer{
         font-size: 40px;
         top: 15px;
         right: 35px;
+    }
+
+    /* FOOTER */
+
+    footer{
+        height: 200px;
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+    }
+    .logo-footer{
+        width: 50%;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .about{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        border: none;
+        border-bottom: 3px solid black;
+        margin-bottom: 1rem;
+    }
+    .menu-footer{
+        width: 100%;
+        display: flex;
+    }
+    .terms{
+        width: 100%;
+        text-align: center;
     }
 }
