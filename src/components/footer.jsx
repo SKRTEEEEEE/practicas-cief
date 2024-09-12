@@ -10,7 +10,7 @@ function Footer() {
             <footer id='contacto'>
                 <div className='sobre'>
                     <div className='logo-footer'>
-                        <img src="/public/img/moto2go_clear.png" alt="" srcset="" />
+                        <img src="/img/moto2go_clear.png" alt="" srcset="" />
                     </div>
                     <div className="menu-footer">
                         <a href="#">About</a>
