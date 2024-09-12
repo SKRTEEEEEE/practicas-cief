@@ -1,0 +1,38 @@
+[
+    {
+        "name": "mh vince 125",
+        "cilindrada": "125cc",
+        "depositoGas": "7,2 L",
+        "price": "50,00",
+        "description": "Noe-retro scooter, its vintage style is combined with the latest technological solutions. Designed to offer maximum efficiency with a minimun fuel consumption of 2.8 liters per 100 km. with a weight of 115 kg it makes it a very agile motorccycle with spacious handling. especially for a urban driving.",
+        "photo": {
+            "front": "./public/img/motos/mh_vince_125.jpg",
+            "side": "./public/img/motos/mh_vince_125_front.jpg",
+            "interior": "./public/img/motos/mh_vince_125_interior.jpg"
+        }
+    },
+    {
+        "name": "Piaggio Beverly 125",
+        "cilindrada": "125cc",
+        "depositoGas": "15 L",
+        "price": "50,00",
+        "description": "Elegante, práctico y único; esa sería la definición en tres palabras para el Piaggio Beverly 125. Se trata de un refinado scooter con rueda alta que puede ser conducido con un carnet de coche convencional. Este tipo de modelo ha sido bien recibido por el usuario gracias a su diseño “ligero” que presenta. Montar una de estas motocicletas hace pensar a cualquier que puede ir por los espacios más reducidos en carretera.",
+        "photo": {
+            "front": "./public/img/motos/mh_vince_125.jpg",
+            "side": "./public/img/motos/mh_vince_125_front.jpg",
+            "interior": "./public/img/motos/mh_vince_125_interior.jpg"
+        }
+    },
+    {
+        "name": "sym jet 14 125",
+        "cilindrada": "125cc",
+        "depositoGas": "15 L",
+        "price": "50,00",
+        "description": "Elegante, práctico y único; esa sería la definición en tres palabras para el Piaggio Beverly 125. Se trata de un refinado scooter con rueda alta que puede ser conducido con un carnet de coche convencional. Este tipo de modelo ha sido bien recibido por el usuario gracias a su diseño “ligero” que presenta. Montar una de estas motocicletas hace pensar a cualquier que puede ir por los espacios más reducidos en carretera.",
+        "photo": {
+            "front": "./public/img/motos/mh_vince_125.jpg",
+            "side": "./public/img/motos/mh_vince_125_front.jpg",
+            "interior": "./public/img/motos/mh_vince_125_interior.jpg"
+        }
+    }
+]
