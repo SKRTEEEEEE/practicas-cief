@@ -24,10 +24,10 @@ function Header() {
         
         {/* Conteúdo do overlay */}
         <div className="overlay-content">
-          <a href="#">About</a>
-          <a href="#">Services</a>
-          <a href="#">Clients</a>
-          <a href="#contacto">Contact</a>
+          <a href="#">sobre</a>
+          <a href="#">servicios</a>
+          <a href="#">cliente</a>
+          <a href="#contacto">contacto</a>
         </div>
       </div>
     </nav>
