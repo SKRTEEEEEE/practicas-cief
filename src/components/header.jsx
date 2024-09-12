@@ -10,7 +10,9 @@ function Header() {
 
   return (
     <nav>
-      <div>Moto2GoCentral</div>
+      <div className='logo-nav'>
+      <img src="/public/img/moto2go_clear.png" alt="" srcset="" />
+      </div>
       {/* Botão para abrir o overlay */}
       <span className='menu' onClick={openNav} style={{ cursor: 'pointer' }}>&#9776;</span>
 
@@ -25,7 +27,7 @@ function Header() {
           <a href="#">About</a>
           <a href="#">Services</a>
           <a href="#">Clients</a>
-          <a href="#">Contact</a>
+          <a href="#contacto">Contact</a>
         </div>
       </div>
     </nav>
