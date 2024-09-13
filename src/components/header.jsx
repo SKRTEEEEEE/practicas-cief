@@ -29,7 +29,9 @@ function Header() {
             <a>Sobre</a>
           </Link>
           <a href="#">servicios</a>
-          <a href="#">cliente</a>
+          <Link to='/cliente'>
+          <a>cliente</a>
+          </Link>
           <Link to="/contacto">
             <a>contacto</a>
           </Link>

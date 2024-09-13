@@ -1,0 +1,18 @@
+[
+    { 
+        "src": "../img/img1.avif", 
+    "caption": "Caption Text" 
+},
+    { 
+        "src": "../img/img4.avif", 
+    "caption": "Caption Text" 
+},
+    { 
+        "src": "../img/img2.avif", 
+        "caption": "Caption Text"  
+    },
+    { 
+        "src": "../img/img3.avif", 
+        "caption": "Caption Text"  
+    }
+  ]
