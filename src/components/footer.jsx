@@ -13,11 +13,17 @@ function Footer() {
                         <img src="../img/moto2go_clear.png" alt="" srcset="" />
                     </div>
                     <div className="menu-footer">
-                        <a href="#">sobre</a>
+                        <Link to="/sobre">
+                            <a>sobre</a>
+                        </Link>
                         <a href="#">servicios</a>
                         <a href="#">cliente</a>
-                        <a href="#contacto">Contacto</a>
-                        <a href="#" target="_blank" rel="noopener noreferrer">Terms and Conditions!</a>
+                        <Link to="/contacto">
+                            <a>contacto</a>
+                        </Link>
+                        <Link to="/terms">
+                            <a>Terms and Conditions!</a>
+                        </Link>
                     </div>
                 </div>
                 <div className='termos-container'>

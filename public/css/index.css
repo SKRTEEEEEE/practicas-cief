@@ -7,7 +7,7 @@
 
 body {
     height: 100vh;
-    width: calc(100vw - 16.5px);
+    width: 100vw;
 }
 
 li {
