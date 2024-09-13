@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 function Header() {
   // Gerenciar o estado para abrir e fechar o overlay
@@ -11,23 +12,28 @@ function Header() {
   return (
     <nav>
       <div className='logo-nav'>
-      <img src="../img/moto2go_clear.png" alt="" srcset="" />
+        <img src="../img/moto2go_clear.png" alt="" srcset="" />
       </div>
       {/* Botão para abrir o overlay */}
       <span className='menu' onClick={openNav} style={{ cursor: 'pointer' }}>&#9776;</span>
 
       {/* Overlay */}
       <div id="myNav" className="overlay" style={{ height: isOpen ? '100%' : '0' }}>
-        
+
         {/* Botão para fechar o overlay */}
         <a href="#" className="closebtn" onClick={closeNav}>&times;</a>
-        
+
         {/* Conteúdo do overlay */}
         <div className="overlay-content">
-          <a href="#">sobre</a>
+          <Link to='/sobre'>
+            <a>Sobre</a>
+          </Link>
           <a href="#">servicios</a>
           <a href="#">cliente</a>
-          <a href="#contacto">contacto</a>
+          <Link to="/contacto">
+            <a>contacto</a>
+          </Link>
+
         </div>
       </div>
     </nav>

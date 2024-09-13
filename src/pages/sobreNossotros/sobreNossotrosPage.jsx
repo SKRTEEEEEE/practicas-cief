@@ -3,9 +3,10 @@ import React, { useState } from 'react';
 function Sobre() {
 
   return (
-    <>
-    <h1>rafael</h1>
-    </>
+    <div>
+      <h1>sobre nos</h1>
+      <p>bem-vindo a pagina sobre!</p>
+    </div>
   );
 }
 
