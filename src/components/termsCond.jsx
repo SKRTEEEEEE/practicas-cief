@@ -45,8 +45,8 @@ function Terms() {
             <p>Se você tiver alguma dúvida sobre estes Termos e Condições, entre em contato conosco:</p>
             <ul>
                 <li>Email: email@exemplo.com</li>
-                <li>Telefone: [Número de telefone]</li>
-                <li>Endereço: [Endereço da empresa]</li>
+                <li>Telefone: +34611788889</li>
+                <li>Endereço: Plaza España, 25, 08870 Sitges, Barcelona</li>
             </ul>
         </>
     );

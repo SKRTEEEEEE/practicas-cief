@@ -10,13 +10,13 @@ function Footer() {
             <footer id='contacto'>
                 <div className='sobre'>
                     <div className='logo-footer'>
-                        <img src="/public/img/moto2go_clear.png" alt="" srcset="" />
+                        <img src="../img/moto2go_clear.png" alt="" srcset="" />
                     </div>
                     <div className="menu-footer">
-                        <a href="#">About</a>
-                        <a href="#">Services</a>
-                        <a href="#">Clients</a>
-                        <a href="#contacto">Contact</a>
+                        <a href="#">sobre</a>
+                        <a href="#">servicios</a>
+                        <a href="#">cliente</a>
+                        <a href="#contacto">Contacto</a>
                         <a href="#" target="_blank" rel="noopener noreferrer">Terms and Conditions!</a>
                     </div>
                 </div>
@@ -24,7 +24,7 @@ function Footer() {
                     <div className='contacto'>
                         <div className="donde">
                             <h3 className='h3-footer'>donde encontranos</h3>
-                            <p>endereco : Plaza España, 25, 08870 Sitges, Barcelona</p>
+                            <p>endereco: Plaza España, 25, 08870 Sitges, Barcelona</p>
                             <p>telefono: +34611788889</p>
                             <p>email: email@email.com</p>
 
