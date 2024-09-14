@@ -55,7 +55,7 @@ const motos = [
   function Disponible() {
     return (
       <div className="disp-container">
-          <h2>Disponibilidade</h2>
+          <h2>Motos</h2>
           
           <div className="container">
             {motos.map((moto, index) => (
