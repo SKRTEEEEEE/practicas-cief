@@ -1,15 +1,18 @@
 import React, { useState } from 'react';
+//import dataBicis from '../../../bicis.json';
+import data from '../../../data.json';
+import imagenes from '../../../backgroundIMG.json'
 //import './Slideshow.css';  // Certifique-se de ter o arquivo CSS
 
-const images = [
-  { src: '../img/img1.avif', caption: 'Caption Text' },
-  { src: '../img/img4.avif', caption: 'Caption Four' },
-  { src: '../img/img2.avif', caption: 'Caption Two' },
-  { src: '../img/img3.avif', caption: 'Caption Three' },
-];
+const images = imagenes;
 
-function Slideshow() {
+const motos = data.filter(item => item.tipo === 'moto');
+const bicicletas = data.filter(item => item.tipo === 'bicicleta');
+//const bicis = dataBicis;
+
+function HomePage() {
   const [slideIndex, setSlideIndex] = useState(1);
+  const [show, setShow] = useState('moto');
 
   const plusSlides = (n) => {
     let newIndex = slideIndex + n;
@@ -25,7 +28,18 @@ function Slideshow() {
     setSlideIndex(n);
   };
 
+  const handleShowMotos = () => {
+    setShow('motos');
+  }
+
+  const handleShowBicicletas = () => {
+    setShow('bicicletas')
+  }
+
+  const itemsToShow = show === 'motos' ? motos : bicicletas;
+
   return (
+    <>
     <div className="slideshow-container">
       {images.map((image, index) => (
         <div
@@ -54,7 +68,25 @@ function Slideshow() {
       <a className="prev" onClick={() => plusSlides(-1)}>&#10094;</a>
       <a className="next" onClick={() => plusSlides(1)}>&#10095;</a>
     </div>
+    <div className="disp-container">
+    <h2>Disponibilidade</h2>
+    <button onClick={handleShowMotos}>Motos</button>
+    <button onClick={handleShowBicicletas}>Bicis</button>
+    
+    <div className="container">
+      {itemsToShow.map((item, index) => (
+        <div className="card" key={index}>
+            <img className='img-disp' src={item.foto} alt={item.nome} />
+            <h3 className='h3-disp'>{item.nome}</h3>
+            <p className='km-disp'>Quilometragem: {item.kilometragem} km</p>
+            <p className='price-disp'>Preço: R$ {item.preco}</p>
+            <button className='btn-disp'>Reserve</button>
+        </div>
+      ))}
+    </div>
+</div>
+</>
   );
 }
 
-export default Slideshow;
+export default HomePage;
