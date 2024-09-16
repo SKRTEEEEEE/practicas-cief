@@ -165,7 +165,7 @@ nav {
     animation-duration: 1.5s;
 }
 
-/* SECTION DISPONIBLE */
+/* --------------------- Seccion vehiculos disponibles -----------------------*/
 .disp-container {
     width: 100%;
     height: auto;
@@ -185,28 +185,52 @@ h2 {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    justify-content: center;
     gap: 5rem;
 }
 
+/* Card de cada vehiculo */
 .card {
-    height: 400px;
-    width: 300px;
+    height: 350px;
+    width: 250px;
     padding: 1rem 2rem;
-
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
     align-items: center;
     background-color: #bbb;
+    border-radius: 10px;
+    gap: 1rem;
 }
 
 .img-disp {
     height: 40%;
-    background-color: #bbb;
+}
+
+.info-card {
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.2rem;
 }
 
 .btn-disp {
     padding: .3rem 1rem;
+    width: 100%;
+    font-size: 1rem;
+    background-color: white;
+    border: 2px solid black;
+    transition: 0.2s;
+    border-radius: 10px;
 }
+
+.btn-disp:hover {
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    scale: 1.05;
+  }
 
 /* FOOTER */
 footer{
