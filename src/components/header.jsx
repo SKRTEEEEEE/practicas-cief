@@ -11,11 +11,10 @@ function Header() {
 
   return (
     <nav>
-      <div className="logo-nav">
-        {/*Agregado del enlace al home en la imagen del logo */}
-        <a href="/">
-          <img src="../img/moto2go_clear.png" alt="" srcset="" />
-        </a>
+      <div className='logo-nav'>
+        <Link to='/'>
+        <img src="../img/moto2go_clear.png" alt="" srcset="" />
+        </Link>
       </div>
 
       {/* Botão para abrir o overlay */}
@@ -39,9 +38,9 @@ function Header() {
           <Link to="/sobre">
             <p>Sobre</p>
           </Link>
-          <a href="#">servicios</a>
-          <Link to="/cliente">
-            <a>cliente</a>
+          <a href="#">alquiler</a>
+          <Link to='/cliente'>
+          <a>cliente</a>
           </Link>
           <Link to="/contacto">
             <a>contacto</a>

@@ -43,6 +43,8 @@ nav {
     display: flex;
     justify-content: space-around;
     align-items: center;
+
+    z-index: 1;
 }
 .overlay-content a{
     text-transform: uppercase;
@@ -233,7 +235,7 @@ h2 {
   }
 
 /* FOOTER */
-footer{
+/* footer{
     height: auto;
     padding: 1rem 0;
     width: 100%;
@@ -327,7 +329,15 @@ img{
         font-size: 14px;
     }
 }
+ */
 
+ @media(max-width:1068px){
+
+    .overlay{
+        width: 55%;
+        display: flex;
+    }
+ }
 
 @media(max-width:768px) {
 
@@ -340,7 +350,6 @@ img{
         display: flex;
         justify-content: space-between;
         align-items: center;
-
         padding: 0 1rem;
     }
 
@@ -391,17 +400,14 @@ img{
 
     /* The navigation links inside the overlay */
     .overlay a {
-        padding: 8px;
+        padding: 20px;
         text-decoration: none;
         font-size: 36px;
-        color: #818181;
+        color: #5d5a5a;
         display: block;
         /* Display block instead of inline */
         transition: 0.3s;
         /* Transition effects on hover (color) */
-    }
-    .overlay a{
-        margin-bottom: 4rem;
     }
 
     /* When you mouse over the navigation links, change their color */
@@ -429,7 +435,7 @@ img{
     }
 
     /* FOOTER */
-    footer{
+    /* footer{
         padding: 1rem;
         width: 100%;
         display: flex;
@@ -481,5 +487,5 @@ img{
     }
     .dias-de-la-semana:hover{
         color: orangered;
-    }
+    } */
 }
