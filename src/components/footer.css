@@ -1,6 +1,6 @@
 footer{
     height: auto;
-    padding: 1rem 0;
+    padding: 1rem;
     width: 100%;
     display: flex;
     align-items: center;
@@ -26,13 +26,17 @@ img{
 .menu-footer{
     width: 80%;
     margin-top: .6rem;
+    padding: 0 10px;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 .menu-footer a{
     font-size: 14px;
-    padding: 1rem 1.4rem;
-    color: white;
+    padding: .6rem 1rem;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    text-transform: uppercase;
 }
 .menu-footer a:not(:last-child){
     border-right: 1px solid rgb(255, 255, 255);
@@ -70,13 +74,24 @@ img{
 }
 @media (max-width:1270px){
     footer{
-        padding: 0 1rem;
+        padding: 1rem;
     }
     .sobre{
         flex-direction: column;
     }
     .h3-footer{
         font-size: 16px;
+    }
+    .logo-footer{
+        height: 70px;
+    }
+    .menu-footer{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .menu-footer a{
+        font-size: 12px;
+        padding: .6rem .8rem;
     }
     .donde{
         padding: 0 1rem;
@@ -92,7 +107,7 @@ img{
 @media (max-width:968px) {
     footer{
         padding: 1rem;
-        width: 100%;
+        width: 100vw;
         display: flex;
         flex-direction: column;
     }
@@ -104,10 +119,11 @@ img{
     }
     .menu-footer{
         width: 100%;
+/*         display: flex;
+        flex-wrap: wrap; */
     }
     .menu-footer a{
-        font-size: 12px;
-        padding: .6rem 1rem;
+        padding: .6rem .6rem;
     }
     .termos-container{
         width: 100%;
@@ -139,8 +155,5 @@ img{
         text-transform: uppercase;
         display: flex;
         justify-content: space-between;
-    }
-    .dias-de-la-semana:hover{
-        color: orangered;
     }
 }

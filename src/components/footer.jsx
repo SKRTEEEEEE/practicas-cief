@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-//import './footer.css'
+import './footer.css'
 
 function Footer() {
 
@@ -22,7 +22,7 @@ function Footer() {
                             <a>contacto</a>
                         </Link>
                         <Link to="/terms">
-                            <a>Terms and Conditions!</a>
+                            <a>Termos</a>
                         </Link>
                     </div>
                 </div>
