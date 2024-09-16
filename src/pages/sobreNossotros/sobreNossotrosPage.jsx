@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Footer from '../../components/footer';
 import HeaderComp from '../../components/header'
 import './sobreNossostrosPage.css'
 
@@ -15,6 +16,7 @@ function Sobre() {
       <p>Nuestro equipo es apasionado por los deportes y la motorización, y siempre estamos listos para ayudarte a elegir el vehículo ideal para tu aventura. Ven a visitarnos y descubre la mejor manera de explorar Sitges y sus alrededores, ya sea en el asfalto o en los senderos.</p>
       </div>
     </div>
+    <Footer/>
     </>
   );
 }

@@ -12,7 +12,9 @@ function Header() {
   return (
     <nav>
       <div className='logo-nav'>
+        <Link to='/'>
         <img src="../img/moto2go_clear.png" alt="" srcset="" />
+        </Link>
       </div>
       {/* Botão para abrir o overlay */}
       <span className='menu' onClick={openNav} style={{ cursor: 'pointer' }}>&#9776;</span>
@@ -28,7 +30,7 @@ function Header() {
           <Link to='/sobre'>
             <a>Sobre</a>
           </Link>
-          <a href="#">servicios</a>
+          <a href="#">alquiler</a>
           <Link to='/cliente'>
           <a>cliente</a>
           </Link>
