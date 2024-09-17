@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { APIProvider, Map } from '@vis.gl/react-google-maps';
 import HeaderComp from '../../components/header'
-import data from '../../../apiKey.json'
+//import data from '../../../apiKey.json'
 import './contactoPage.css'
 
 function Contacto() {
@@ -9,7 +9,7 @@ function Contacto() {
     //const [open, setOpen] = useState(false)
     const whatsappNumber = +34611788889;
     const whatsappMessage = 'Hola, me gustaría saber más sobre sus servicios.';
-    const dataJson = data;
+    //const dataJson = data;
     return (
         <div>
             <HeaderComp />
