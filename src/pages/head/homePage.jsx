@@ -49,9 +49,8 @@ function HomePage() {
         {images.map((image, index) => (
           <div
             key={index}
-            className={`mySlides fade ${
-              slideIndex === index + 1 ? "active" : ""
-            }`}
+            className={`mySlides fade ${slideIndex === index + 1 ? "active" : ""
+              }`}
             style={{ display: slideIndex === index + 1 ? "block" : "none" }}
           >
             {/* <div className="numbertext">{index + 1} / {images.length}</div> */}
@@ -67,9 +66,8 @@ function HomePage() {
               {images.map((_, dotIndex) => (
                 <span
                   key={dotIndex}
-                  className={`dot ${
-                    slideIndex === dotIndex + 1 ? "active" : ""
-                  }`}
+                  className={`dot ${slideIndex === dotIndex + 1 ? "active" : ""
+                    }`}
                   onClick={() => currentSlide(dotIndex + 1)}
                 ></span>
               ))}
@@ -103,11 +101,15 @@ function HomePage() {
               <img className="img-disp" src={item.foto} alt={item.nombre} />
               <div className="info-card">
                 <h3 className="h3-disp">{item.nombre}</h3>
-                <p className="km-disp">Descripción: {item.descripcion} </p>
+                <p className="km-disp">Descripción: {item.descripcion}</p>
                 <p className="price-disp">Fianza: {item.fianza} €</p>
                 <p className="price-disp">Precio: {item.precio} €</p>
               </div>
-              <button className="btn-disp">Reservar</button>
+
+              {/* Botão fixo ao fundo da carta */}
+              <div className="button-container">
+                <button className="btn-disp">Reservar</button>
+              </div>
             </div>
           ))}
         </div>

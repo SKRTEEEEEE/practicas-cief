@@ -24,7 +24,7 @@ function Contacto() {
                     <p>telefono: +34611788889 <a className='a-whats' href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`} target='_blank' rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i></a></p>
                     <p>email: email@email.com</p>
                 </div>
-                <APIProvider apiKey={dataJson}>
+                <APIProvider apiKey="AIzaSyDsdw3Jt90NOor9eGU9oeusrRp1d3wuJt8">
                     <div className="mapa">
                         <Map zoom={19} center={position}></Map>
                     </div>
