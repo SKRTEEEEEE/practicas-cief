@@ -1,8 +1,14 @@
-# React + Vite
+# Moto2Go Central
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Overview
+This project was built using React.js and CSS with the aim of increasing brand visibility and automating the reservation process. The platform allows customers to easily browse and select motorbikes or bicycles for rent. Once the selection is made, users are redirected to WhatsApp with a pre-filled message containing all the necessary booking details, streamlining the reservation experience.
 
-Currently, two official plugins are available:
+# Features
+Enhanced Brand Visibility: Clean and modern design to attract new customers.
+Automated Reservation: After choosing a product and rental period, users are automatically redirected to WhatsApp to finalize their booking.
+Responsive UI: Fully responsive design, providing an optimal experience on all devices.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# Technologies Used
+React.js for the front-end
+CSS for styling and layout
+WhatsApp Integration for automated booking
