@@ -12,3 +12,5 @@ Responsive UI: Fully responsive design, providing an optimal experience on all d
 React.js for the front-end
 CSS for styling and layout
 WhatsApp Integration for automated booking
+
+## deploy at https://moto2gocentral.netlify.app/
