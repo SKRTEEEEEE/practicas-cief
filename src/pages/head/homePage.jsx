@@ -8,6 +8,8 @@ const motos = data.filter((item) => item.tipo === "moto");
 const bicicletas = data.filter((item) => item.tipo === "bicicleta");
 
 function HomePage() {
+  const whatsappNumber = +34671222750;
+
   const [slideIndex, setSlideIndex] = useState(1);
   const [vehicleType, setVehicleType] = useState("motos");
   const [vehiculo, setVehiculo] = useState("Motocicletas");
@@ -40,6 +42,7 @@ function HomePage() {
 
   return (
     <>
+      {/* Slideshow principal */}
       <div className="slideshow-container">
         {images.map((image, index) => (
           <div
@@ -71,32 +74,75 @@ function HomePage() {
         </a>
       </div>
 
+      {/* Exibição de veículos */}
       <div className="disp-container">
         <h2>{vehiculo} disponibles</h2>
         <div className="selector-vehiculos">
           <button className="button-motos" onClick={handleShowMotos}>
             Motos
           </button>
-          <button className="button-bicis" onClick={handleShowBicicletas}>
-            Bicis
-          </button>
+          {/* <button className="button-bicis" onClick={handleShowBicicletas}>
+            Bicicletas
+          </button> */}
         </div>
 
         <div className="container">
-          {itemsToShow.map((item, index) => (
-            <div className="card" key={index}>
-              <img className="img-disp" src={item.foto} alt={item.nombre} />
-              <div className="info-card">
-                <h3 className="h3-disp">{item.nombre}</h3>
-                <p className="km-disp">Descripción: {item.descripcion}</p>
-                <p className="price-disp">Fianza: {item.fianza} €</p>
-                <p className="price-disp">Precio: {item.precio} €</p>
+          {itemsToShow.map((item, index) => {
+            const photos = Object.values(item.foto); // Obter as fotos do JSON
+            const [currentImageIndex, setCurrentImageIndex] = useState(0); // Controlar a imagem atual
+
+            const handleNextPhoto = () => {
+              setCurrentImageIndex((prevIndex) =>
+                prevIndex === photos.length - 1 ? 0 : prevIndex + 1
+              );
+            };
+
+            const handlePreviousPhoto = () => {
+              setCurrentImageIndex((prevIndex) =>
+                prevIndex === 0 ? photos.length - 1 : prevIndex - 1
+              );
+            };
+
+            return (
+              <div className="card" key={index}>
+                {/* Carrossel de imagens do card */}
+                <div className="image-container">
+                  <img
+                    className="img-disp"
+                    src={photos[currentImageIndex]} // Exibe a foto atual
+                    alt={item.nombre}
+                  />
+                  {photos.length > 1 && (
+                    <div className="image-controls">
+                      <button onClick={handlePreviousPhoto} className="btn-control">
+                        &#10094;
+                      </button>
+                      <button onClick={handleNextPhoto} className="btn-control">
+                        &#10095;
+                      </button>
+                    </div>
+                  )}
+                </div>
+                <div className="info-card">
+                  <h3 className="h3-disp">{item.nombre}</h3>
+                  <p className="km-disp">Descripción: {item.descripcion}</p>
+                  <p className="price-disp">Fianza: {item.fianza} €</p>
+                  <p className="price-disp">Precio: {item.precio} €</p>
+                </div>
+                <div className="button-container">
+                  <a
+                    className="btn-disp"
+                    href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(`Hola, me gustaría saber más sobre el producto ${item.nombre}.`)}`
+                    }
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Reservar
+                  </a>
+                </div>
               </div>
-              <div className="button-container">
-                <button className="btn-disp">Reservar</button>
-              </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </>

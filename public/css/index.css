@@ -236,12 +236,12 @@ nav {
     object-fit: cover; /* Garantir que a imagem preencha o espaço adequadamente */
     border-radius: 8px;
   }
-  .slideshow-controls{
+  .image-controls{
     width: 100%;
     display: flex;
     justify-content: space-between;
   }
-  .prev-slide, .next-slide{
+  .btn-control{
     border: none;
     padding: 5px;
   }
@@ -258,8 +258,10 @@ nav {
     justify-content: center;
     margin-top: auto; /* Faz o botão ir para o fim da card */
   }
-  
-  .btn-disp {
+  .button-container a{
+    text-decoration: none;
+  }
+  .btn-disp{
     padding: 10px 20px;
     background-color: #000000;
     color: white;
