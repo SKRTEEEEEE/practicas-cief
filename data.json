@@ -115,7 +115,10 @@
     "tipo": "bicicleta",
     "fianza": 300,
     "precio": 50,
-    "foto": "https://ktm-bike.pt/resources/medias/shop/products/thumbnails/shop-image-large/3f489c4513b7383854a0d26fc8d0aa23.jpg"
+   "foto":{ 
+      "1": "https://pernalonga.pt/wp-content/uploads/2023/04/5.001.jpeg",
+      "2": "https://ktm-bike.pt/resources/medias/shop/products/thumbnails/shop-image-large/3f489c4513b7383854a0d26fc8d0aa23.jpg"
+  }
   },
   {
     "nombre": "Bicicleta de Montanha X2",
@@ -123,7 +126,10 @@
     "tipo": "bicicleta",
     "fianza": 300,
     "precio": 50,
-    "foto": "https://pernalonga.pt/wp-content/uploads/2023/04/5.001.jpeg"
+    "foto":{ 
+      "1": "https://pernalonga.pt/wp-content/uploads/2023/04/5.001.jpeg",
+      "2": "https://ktm-bike.pt/resources/medias/shop/products/thumbnails/shop-image-large/3f489c4513b7383854a0d26fc8d0aa23.jpg"
+  }
   },
   {
     "nombre": "Bicicleta de Montanha X2",
@@ -131,7 +137,10 @@
     "tipo": "bicicleta",
     "fianza": 300,
     "precio": 50,
-    "foto": "https://www.unibanco.pt/blog/wp-content/uploads/sites/3/2021/08/ST100-1200x800.jpg"
+    "foto":{ 
+      "1": "https://pernalonga.pt/wp-content/uploads/2023/04/5.001.jpeg",
+      "2": "https://ktm-bike.pt/resources/medias/shop/products/thumbnails/shop-image-large/3f489c4513b7383854a0d26fc8d0aa23.jpg"
+  }
   },
   {
     "nombre": "Bicicleta de Montanha X2",
@@ -139,6 +148,9 @@
     "tipo": "bicicleta",
     "fianza": 300,
     "precio": 50,
-    "foto": "https://contents.mediadecathlon.com/p2623169/k$716ba93a19e7764f18dc1d7ff95624e0/sq/8732640.jpg?format=auto&f=800x0"
+    "foto":{ 
+      "1": "https://pernalonga.pt/wp-content/uploads/2023/04/5.001.jpeg",
+      "2": "https://ktm-bike.pt/resources/medias/shop/products/thumbnails/shop-image-large/3f489c4513b7383854a0d26fc8d0aa23.jpg"
+  }
   }
 ]
