@@ -236,6 +236,15 @@ nav {
     object-fit: cover; /* Garantir que a imagem preencha o espaço adequadamente */
     border-radius: 8px;
   }
+  .slideshow-controls{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .prev-slide, .next-slide{
+    border: none;
+    padding: 5px;
+  }
   
   /* Conteúdo textual da card */
   .info-card {

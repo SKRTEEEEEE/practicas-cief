@@ -1,21 +1,16 @@
 import React, { useState } from "react";
-//import dataBicis from '../../../bicis.json';
 import data from "../../../data.json";
 import imagenes from "../../../backgroundIMG.json";
-//import './Slideshow.css';  // Certifique-se de ter o arquivo CSS
 
 const images = imagenes;
 
 const motos = data.filter((item) => item.tipo === "moto");
 const bicicletas = data.filter((item) => item.tipo === "bicicleta");
-//const bicis = dataBicis;
-
-// Variable para modificar el título del tipo de vehículos
-let vehiculo = "Vehículos";
 
 function HomePage() {
   const [slideIndex, setSlideIndex] = useState(1);
-  const [show, setShow] = useState("moto");
+  const [vehicleType, setVehicleType] = useState("motos");
+  const [vehiculo, setVehiculo] = useState("Motocicletas");
 
   const plusSlides = (n) => {
     let newIndex = slideIndex + n;
@@ -32,16 +27,16 @@ function HomePage() {
   };
 
   const handleShowMotos = () => {
-    setShow("motos");
-    vehiculo = "Motocicletas";
+    setVehicleType("motos");
+    setVehiculo("Motocicletas");
   };
 
   const handleShowBicicletas = () => {
-    setShow("bicicletas");
-    vehiculo = "Bicicletas";
+    setVehicleType("bicicletas");
+    setVehiculo("Bicicletas");
   };
 
-  const itemsToShow = show === "motos" ? motos : bicicletas;
+  const itemsToShow = vehicleType === "motos" ? motos : bicicletas;
 
   return (
     <>
@@ -49,33 +44,25 @@ function HomePage() {
         {images.map((image, index) => (
           <div
             key={index}
-            className={`mySlides fade ${slideIndex === index + 1 ? "active" : ""
-              }`}
+            className={`mySlides fade ${slideIndex === index + 1 ? "active" : ""}`}
             style={{ display: slideIndex === index + 1 ? "block" : "none" }}
           >
-            {/* <div className="numbertext">{index + 1} / {images.length}</div> */}
             <img
               className="img-head"
               src={image.src}
               alt={`Slide ${index + 1}`}
             />
-            {/* <div className="text">{image.caption}</div> */}
-
-            {/* Dots inside the image */}
             <div className="dots-container">
               {images.map((_, dotIndex) => (
                 <span
                   key={dotIndex}
-                  className={`dot ${slideIndex === dotIndex + 1 ? "active" : ""
-                    }`}
+                  className={`dot ${slideIndex === dotIndex + 1 ? "active" : ""}`}
                   onClick={() => currentSlide(dotIndex + 1)}
                 ></span>
               ))}
             </div>
           </div>
         ))}
-
-        {/* Next and previous buttons */}
         <a className="prev" onClick={() => plusSlides(-1)}>
           &#10094;
         </a>
@@ -105,8 +92,6 @@ function HomePage() {
                 <p className="price-disp">Fianza: {item.fianza} €</p>
                 <p className="price-disp">Precio: {item.precio} €</p>
               </div>
-
-              {/* Botão fixo ao fundo da carta */}
               <div className="button-container">
                 <button className="btn-disp">Reservar</button>
               </div>

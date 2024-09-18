@@ -5,7 +5,10 @@
     "tipo": "moto",
     "fianza": 300,
     "precio": 50,
-    "foto":"/img/motos/mh_vince_125.jpg"
+    "foto":{
+      "1": "/img/motos/mh_vince_125.jpg",
+      "2": "/img/motos/mh_vince_125_1.jpg"
+  }
   },
   {
     "nombre": "piagio bervely 125cc",
@@ -13,7 +16,10 @@
     "tipo": "moto",
     "fianza": 300,
     "precio": 50,
-    "foto": "/img/motos/piaggio_bervely_125.jpg"
+    "foto":{
+      "1": "/img/motos/piaggio_bervely_125.jpg",
+      "2": "/img/motos/piaggio_bervely_125_1.jpg"
+  }
   },
   {
     "nombre": "sym jet 14 125cc",
@@ -21,7 +27,10 @@
     "tipo": "moto",
     "fianza": 300,
     "precio": 50,
-    "foto": "/img/motos/sym_jet_14_125.jpg"
+    "foto":{
+      "1": "/img/motos/sym_jet_14_125.jpg",
+      "2": "/img/motos/sym_jet_14_125_1.jpg"
+  }
   },
   {
     "nombre": "benelli trk 502",
@@ -29,7 +38,10 @@
     "tipo": "moto",
     "fianza": 300,
     "precio": 50,
-    "foto": "/img/motos/benelli_trk_502.webp"
+    "foto":{
+      "1": "/img/motos/benelli_trk_502.webp",
+      "2": "/img/motos/benelli_trk_502_1.webp"
+  }
   },
   {
     "nombre": "sym symphony sr 125",
@@ -37,7 +49,10 @@
     "tipo": "moto",
     "fianza": 300,
     "precio": 50,
-    "foto": "/img/motos/sym_symphony_125_sr.jpg"
+    "foto":{
+      "1": "/img/motos/sym_symphony_125_sr.jpg",
+      "2": "/img/motos/sym_symphony_125_sr_1.jpg"
+  }
   },
   {
     "nombre": "suzuki burgman 125",
@@ -45,7 +60,10 @@
     "tipo": "moto",
     "fianza": 300,
     "precio": 50,
-    "foto": "/img/motos/suzuki_burgman_125.jpg"
+    "foto":{
+      "1": "/img/motos/suzuki_burgman_125.jpg",
+      "2": "/img/motos/suzuki_burgman_125_1.jpg"
+  }
   },
   {
     "nombre": "kymco k-xct 125",
@@ -53,7 +71,10 @@
     "tipo": "moto",
     "fianza": 300,
     "precio": 50,
-    "foto": "/img/motos/kymco_k-xct_125.jpg"
+    "foto":{
+      "1": "/img/motos/kymco_k-xct_125.jpg",
+      "2": "/img/motos/kymco_k-xct__125_1.jpg"
+  }
   },
   {
     "nombre": "yamaha n-max 125",
@@ -61,7 +82,10 @@
     "tipo": "moto",
     "fianza": 300,
     "precio": 50,
-    "foto": "/img/motos/yamaha_n-max_125.jpg"
+    "foto":{
+      "1": "/img/motos/yamaha_n-max_125.jpg",
+      "2": "/img/motos/yamaha_n-max__125_1.jpg"
+  }
   },
   {
     "nombre": "peugeot tweet gt 50",
@@ -69,7 +93,10 @@
     "tipo": "moto",
     "fianza": 300,
     "precio": 50,
-    "foto": "/img/motos/peugeot_tweet_50_gt.jpg"
+    "foto":{
+      "1": "/img/motos/peugeot_tweet_50_gt.jpg",
+      "2": "/img/motos/peugeot_tweet_50_gt_1.jpg"
+  }
   },
   {
     "nombre": "daelim s3 125",
@@ -77,7 +104,10 @@
     "tipo": "moto",
     "fianza": 300,
     "precio": 50,
-    "foto": "/img/motos/dealim_s3_125.jpg"
+    "foto":{
+      "1": "/img/motos/daelim_s3_125.jpg",
+      "2": "/img/motos/daelim_s3_125_1.jpg"
+  }
   },
   {
     "nombre": "Bicicleta de Montanha X2",
