@@ -3,8 +3,11 @@
     --size-h1: 2rem;
     --size-h2: 1.8rem;
     --size-h3: 1.5rem;
-
-
+    --color-oscuro: black;
+    --color-sombra: grey;
+    --color-claro: white;
+    --color-emphasis-claro: rgb(234, 205, 18);
+    --color-emphasis-oscuro: rgb(234, 115, 18);
 }
 
 
