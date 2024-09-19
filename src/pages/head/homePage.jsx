@@ -14,8 +14,13 @@ function HomePage() {
   const [currentImageIndexes, setCurrentImageIndexes] = useState(
     new Array(motos.length).fill(0)
   );
-  const [fechaInicio, setFechaInicio] = useState("");
-  const [fechaTermino, setFechaTermino] = useState("");
+  const [dates, setDates] = useState({}); // Estado para armazenar datas por índice
+
+  const formatDate = (dateString) => {
+    if (!dateString) return ""; // Se o campo estiver vazio, retorna uma string vazia
+    const [year, month, day] = dateString.split("-");
+    return `${day}-${month}-${year}`;
+  };
 
   const plusSlides = (n) => {
     let newIndex = slideIndex + n;
@@ -53,6 +58,20 @@ function HomePage() {
       newIndexes[index] = prevIndexes[index] === 0 ? photos.length - 1 : prevIndexes[index] - 1;
       return newIndexes;
     });
+  };
+
+  const handleFechaInicioChange = (index, value) => {
+    setDates((prevDates) => ({
+      ...prevDates,
+      [`start-${index}`]: value
+    }));
+  };
+
+  const handleFechaTerminoChange = (index, value) => {
+    setDates((prevDates) => ({
+      ...prevDates,
+      [`end-${index}`]: value
+    }));
   };
 
   const itemsToShow = show === "motos" ? motos : bicicletas;
@@ -136,16 +155,16 @@ function HomePage() {
                     <input
                       type="date"
                       id={`fechaInicio-${index}`}
-                      value={fechaInicio}
-                      onChange={(e) => setFechaInicio(e.target.value)}
+                      value={dates[`start-${index}`] || ""}
+                      onChange={(e) => handleFechaInicioChange(index, e.target.value)}
                       required
                     />
                     <label htmlFor={`fechaTermino-${index}`}>Fecha de termino:</label>
                     <input
                       type="date"
                       id={`fechaTermino-${index}`}
-                      value={fechaTermino}
-                      onChange={(e) => setFechaTermino(e.target.value)}
+                      value={dates[`end-${index}`] || ""}
+                      onChange={(e) => handleFechaTerminoChange(index, e.target.value)}
                       required
                     />
                   </div>
@@ -158,8 +177,8 @@ function HomePage() {
                     className="btn-disp"
                     href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
                       `Hola, me gustaría saber más sobre el ${item.nombre}.
-                      Fecha de inicio: ${fechaInicio}
-                      Fecha de término: ${fechaTermino}`
+                      Fecha de inicio: ${formatDate(dates[`start-${index}`]) || ""}
+                      Fecha de término: ${formatDate(dates[`end-${index}`]) || ""}`
                     )}`}
                     target="_blank"
                     rel="noopener noreferrer"
