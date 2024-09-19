@@ -5,7 +5,6 @@ import imagenes from "../../../backgroundIMG.json";
 const images = imagenes;
 
 const motos = data.filter((item) => item.tipo === "moto");
-const bicicletas = data.filter((item) => item.tipo === "bicicleta");
 
 function HomePage() {
   const whatsappNumber = +34671222750;
@@ -33,12 +32,7 @@ function HomePage() {
     setVehiculo("Motocicletas");
   };
 
-  const handleShowBicicletas = () => {
-    setVehicleType("bicicletas");
-    setVehiculo("Bicicletas");
-  };
-
-  const itemsToShow = vehicleType === "motos" ? motos : bicicletas;
+  const itemsToShow = vehicleType === "motos" ? motos : [];
 
   return (
     <>
@@ -81,15 +75,16 @@ function HomePage() {
           <button className="button-motos" onClick={handleShowMotos}>
             Motos
           </button>
-          {/* <button className="button-bicis" onClick={handleShowBicicletas}>
-            Bicicletas
-          </button> */}
         </div>
 
         <div className="container">
           {itemsToShow.map((item, index) => {
             const photos = Object.values(item.foto); // Obter as fotos do JSON
             const [currentImageIndex, setCurrentImageIndex] = useState(0); // Controlar a imagem atual
+
+            // Estado para os inputs de data
+            const [fechaInicio, setFechaInicio] = useState("");
+            const [fechaTermino, setFechaTermino] = useState("");
 
             const handleNextPhoto = () => {
               setCurrentImageIndex((prevIndex) =>
@@ -101,6 +96,15 @@ function HomePage() {
               setCurrentImageIndex((prevIndex) =>
                 prevIndex === 0 ? photos.length - 1 : prevIndex - 1
               );
+            };
+
+            // Funções para atualizar as datas
+            const handleFechaInicioChange = (e) => {
+              setFechaInicio(e.target.value);
+            };
+
+            const handleFechaTerminoChange = (e) => {
+              setFechaTermino(e.target.value);
             };
 
             return (
@@ -125,15 +129,37 @@ function HomePage() {
                 </div>
                 <div className="info-card">
                   <h3 className="h3-disp">{item.nombre}</h3>
-                  <p className="km-disp">Descripción: {item.descripcion}</p>
+                  {/* <p className="km-disp">Descripción: {item.descripcion}</p> */}
+
+                  {/* Inputs de data */}
+                  <div className="fecha-container">
+                    <label htmlFor={`fechaInicio-${index}`}>Fecha de inicio:</label>
+                    <input
+                      type="date"
+                      id={`fechaInicio-${index}`}
+                      value={fechaInicio}
+                      onChange={handleFechaInicioChange} // Controla o valor
+                    require />
+                    <label htmlFor={`fechaTermino-${index}`}>Fecha de termino:</label>
+                    <input
+                      type="date"
+                      id={`fechaTermino-${index}`}
+                      value={fechaTermino}
+                      onChange={handleFechaTerminoChange} // Controla o valor
+                    require />
+                  </div>
+
                   <p className="price-disp">Fianza: {item.fianza} €</p>
                   <p className="price-disp">Precio: {item.precio} €</p>
                 </div>
                 <div className="button-container">
                   <a
                     className="btn-disp"
-                    href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(`Hola, me gustaría saber más sobre el producto ${item.nombre}.`)}`
-                    }
+                    href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
+                      `Hola, me gustaría saber más sobre el ${item.nombre}.
+                      ${fechaInicio}
+                      ${fechaTermino}`
+                    )}`}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
