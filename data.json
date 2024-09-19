@@ -106,51 +106,51 @@
     "precio": 50,
     "foto":{
       "1": "/img/motos/daelim_s3_125.jpg",
-      "2": "/img/motos/daelim_s3_125_1.jpg"
+      "2": "/img/motos/daelim_s3_125_1.jpeg"
   }
   },
   {
-    "nombre": "Bicicleta de Montanha X2",
+    "nombre": "Bicicleta de Montanha",
     "descripcion": "aqui va una breve descripcion del vehiculo",
     "tipo": "bicicleta",
     "fianza": 300,
     "precio": 50,
-   "foto":{ 
-      "1": "https://pernalonga.pt/wp-content/uploads/2023/04/5.001.jpeg",
-      "2": "https://ktm-bike.pt/resources/medias/shop/products/thumbnails/shop-image-large/3f489c4513b7383854a0d26fc8d0aa23.jpg"
+   "foto":{
+      "1": "/img/motos/daelim_s3_125.jpg",
+      "2": "/img/motos/daelim_s3_125_1.jpeg"
   }
   },
   {
-    "nombre": "Bicicleta de Montanha X2",
+    "nombre": "Bicicleta de Montanha",
     "descripcion": "aqui va una breve descripcion del vehiculo",
     "tipo": "bicicleta",
     "fianza": 300,
     "precio": 50,
-    "foto":{ 
-      "1": "https://pernalonga.pt/wp-content/uploads/2023/04/5.001.jpeg",
-      "2": "https://ktm-bike.pt/resources/medias/shop/products/thumbnails/shop-image-large/3f489c4513b7383854a0d26fc8d0aa23.jpg"
+    "foto":{
+      "1": "/img/motos/daelim_s3_125.jpg",
+      "2": "/img/motos/daelim_s3_125_1.jpeg"
   }
   },
   {
-    "nombre": "Bicicleta de Montanha X2",
+    "nombre": "Bicicleta de Montanha",
     "descripcion": "aqui va una breve descripcion del vehiculo",
     "tipo": "bicicleta",
     "fianza": 300,
     "precio": 50,
-    "foto":{ 
-      "1": "https://pernalonga.pt/wp-content/uploads/2023/04/5.001.jpeg",
-      "2": "https://ktm-bike.pt/resources/medias/shop/products/thumbnails/shop-image-large/3f489c4513b7383854a0d26fc8d0aa23.jpg"
+    "foto":{
+      "1": "/img/motos/daelim_s3_125.jpg",
+      "2": "/img/motos/daelim_s3_125_1.jpeg"
   }
   },
   {
-    "nombre": "Bicicleta de Montanha X2",
+    "nombre": "Bicicleta de Montanha",
     "descripcion": "aqui va una breve descripcion del vehiculo",
     "tipo": "bicicleta",
     "fianza": 300,
     "precio": 50,
-    "foto":{ 
-      "1": "https://pernalonga.pt/wp-content/uploads/2023/04/5.001.jpeg",
-      "2": "https://ktm-bike.pt/resources/medias/shop/products/thumbnails/shop-image-large/3f489c4513b7383854a0d26fc8d0aa23.jpg"
+    "foto":{
+      "1": "/img/motos/daelim_s3_125.jpg",
+      "2": "/img/motos/daelim_s3_125_1.jpeg"
   }
   }
 ]
