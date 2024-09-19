@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import './footer.css'
+//import './footer.css'
 
 function Footer() {
 
@@ -13,16 +13,17 @@ function Footer() {
                         <img src="../img/moto2go_clear.png" alt="" srcset="" />
                     </div>
                     <div className="menu-footer">
+                        <Link to="/">
+                            <p>home</p>
+                        </Link>
                         <Link to="/sobre">
-                            <a>sobre</a>
+                            <p>Sobre</p>
                         </Link>
-                        <a href="#">servicios</a>
-                        <a href="#">cliente</a>
+                        <Link to='/cliente'>
+                            <p>cliente</p>
+                        </Link>
                         <Link to="/contacto">
-                            <a>contacto</a>
-                        </Link>
-                        <Link to="/terms">
-                            <a>Termos</a>
+                            <p>contacto</p>
                         </Link>
                     </div>
                 </div>
@@ -30,7 +31,7 @@ function Footer() {
                     <div className='contacto'>
                         <div className="donde">
                             <h3 className='h3-footer'>donde encontranos</h3>
-                            <p>endereco: Plaza España, 25, 08870 Sitges, Barcelona</p>
+                            <p className='ubicacion'>endereco: Plaza España, 25, 08870 Sitges, Barcelona</p>
                             <p>telefono: +34611788889</p>
                             <p>email: email@email.com</p>
 

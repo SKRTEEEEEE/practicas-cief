@@ -35,15 +35,17 @@ function Header() {
 
         {/* Conteúdo do overlay */}
         <div className="overlay-content">
+        <Link to="/">
+            <p>home</p>
+          </Link>
           <Link to="/sobre">
             <p>Sobre</p>
           </Link>
-          <a href="#">alquiler</a>
           <Link to='/cliente'>
-          <a>cliente</a>
+          <p>cliente</p>
           </Link>
           <Link to="/contacto">
-            <a>contacto</a>
+            <p>contacto</p>
           </Link>
         </div>
       </div>
