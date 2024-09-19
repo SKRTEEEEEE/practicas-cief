@@ -3,11 +3,9 @@
     --size-h1: 2rem;
     --size-h2: 1.8rem;
     --size-h3: 1.5rem;
-    --color-oscuro: black;
-    --color-sombra: grey;
-    --color-claro: white;
-    --color-emphasis-claro: rgb(234, 205, 18);
-    --color-emphasis-oscuro: rgb(234, 115, 18);
+
+    --color-black: rgb(0, 0, 0);
+
 }
 
 
@@ -24,6 +22,8 @@ body {
 }
 
 h1, h2, h3 {
+    text-align: center;
+    text-transform: uppercase;
     font-family: "Josefin Sans", sans-serif;
 }
 
@@ -50,7 +50,7 @@ nav {
     justify-content: space-between;
     align-items: center;
 
-    background-color: rgb(0, 0, 0);
+    background-color: var(--color-black);
 }
 .logo-nav{
     height: 100%;
@@ -203,10 +203,6 @@ nav {
     margin-bottom: 2rem;
 }
 
-h2 {
-    text-align: center;
-}
-
 .container {
     height: auto;
     width: 100%;
@@ -220,54 +216,79 @@ h2 {
 }
 
 /* Card de cada vehiculo */
+
 .card {
-    height: 400px;
-    width: 280px;
-    padding: 1rem 2rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    background-color: #bbb;
-    border-radius: 10px;
-    gap: .8rem;
-}
-
-.img-disp {
-    height: 40%;
-}
-
-.info-card {
-    height: 50%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: center;
-    text-align: center;
-    gap: 0.5rem;
-}
-
-.btn-disp {
-    padding: .3rem 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    width: 300px;
+    height: 400px; /* Altura fixa para garantir o alinhamento do botão */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+  }
+  .h3-disp{
+    font-size: 19px;
+  }
+  input{
+    border: none;
+  }
+  /* A imagem deve ocupar o topo da card */
+  .img-disp {
     width: 100%;
-    font-size: 1rem;
-    background-color: white;
-    border: 2px solid black;
-    transition: 0.2s;
-    border-radius: 10px;
-}
-
-.btn-disp:hover {
-    background-color: black;
+    height: 150px; /* Definir altura para garantir que as imagens sejam proporcionais */
+    object-fit: cover; /* Garantir que a imagem preencha o espaço adequadamente */
+    border-radius: 8px;
+  }
+  .image-controls{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .btn-control{
+    background-color: transparent;
+    border: none;
+    padding: 5px;
+  }
+  
+  /* Conteúdo textual da card */
+  .info-card {
+    flex-grow: 1;
+    padding: 10px 0;
+  }
+  
+  /* Botão fixo na parte inferior da card */
+  .button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: auto; /* Faz o botão ir para o fim da card */
+  }
+  .button-container a{
+    text-decoration: none;
+  }
+  .btn-disp{
+    padding: 10px 20px;
+    background-color: #000000;
     color: white;
-    font-weight: bold;
-    scale: 1.05;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .fecha-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
   }
 
 /* FOOTER */
-/* footer{
+footer{
     height: auto;
-    padding: 1rem 0;
+    padding: 1rem;
     width: 100%;
     display: flex;
     align-items: center;
@@ -284,6 +305,16 @@ h2 {
     align-items: center;
     justify-content: space-between;
 }
+.donde{
+    padding: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.ubicacion{
+    text-align: center;
+}
 .logo-footer{
     height: 100px;
 }
@@ -293,15 +324,17 @@ img{
 .menu-footer{
     width: 80%;
     margin-top: .6rem;
+    padding: 0 10px;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 .menu-footer a{
-    text-transform: uppercase;
     font-size: 14px;
-    padding: 1rem 1.4rem;
-    color: white;
+    padding: .6rem 1rem;
+    color: rgb(255, 255, 255);
     text-decoration: none;
+    text-transform: uppercase;
 }
 .menu-footer a:not(:last-child){
     border-right: 1px solid rgb(255, 255, 255);
@@ -338,15 +371,44 @@ img{
     color: orangered;
 }
 
-@media (max-width:1270px){
+ @media(max-width:1068px){
+
+    .overlay{
+        width: 55%;
+        display: flex;
+    }
+    .disp-container {
+        width: 100%;
+        height: auto;
+        padding: 1rem 2rem;
+        margin-bottom: 2rem;
+    }
+    .container {
+        gap: 1rem;
+    }
     footer{
-        padding: 0 1rem;
+        padding: 1rem;
     }
     .sobre{
         flex-direction: column;
     }
     .h3-footer{
         font-size: 16px;
+    }
+    .logo-footer{
+        height: 70px;
+    }
+    .menu-footer{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .menu-footer a:not(:last-child){
+        border-right: none;
+    }
+    .menu-footer a{
+        font-size: 12px;
+        padding: .6rem .6rem;
     }
     .donde{
         padding: 0 1rem;
@@ -357,15 +419,6 @@ img{
     .dias-de-la-semana{
         width: 16rem;
         font-size: 14px;
-    }
-}
- */
-
- @media(max-width:1068px){
-
-    .overlay{
-        width: 55%;
-        display: flex;
     }
  }
 
@@ -384,7 +437,7 @@ img{
     }
 
     .menu {
-        font-size: 50px;
+        font-size: 40px;
         display: block;
         color: #f1f1f1;
     }
@@ -392,38 +445,25 @@ img{
         display: block;
     }
 
-    /* The Overlay (background) */
     .overlay {
         display: flex;
         flex-direction: column;
         height: 100%;
         width: 100%;
         position: fixed;
-        /* Stay in place */
-        z-index: 1;
-        /* Sit on top */
+        z-index: 100;
         left: 0;
         top: 0;
         background-color: rgb(0, 0, 0);
-        /* Black w/opacity */
         overflow-x: hidden;
-        /* Disable horizontal scroll */
         transition: 0.5s;
-        /* 0.5 second transition effect to slide in or slide down the overlay */
     }
-
-    /* Position the content inside the overlay */
     .overlay-content {
         position: relative;
         top: 25%;
-        /* 25% from the top */
         width: 100%;
-        /* 100% width */
         text-align: center;
-        /* Centered text/links */
         margin-top: 30px;
-        /* 30px top margin to avoid conflict with the close button on smaller screens */
-    
         display: flex;
         flex-direction: column;
     }
@@ -464,10 +504,13 @@ img{
         right: 35px;
     }
 
+    .container {
+        gap: 2rem;
+    }
     /* FOOTER */
-    /* footer{
+    footer{
         padding: 1rem;
-        width: 100%;
+        width: 100vw;
         display: flex;
         flex-direction: column;
     }
@@ -479,10 +522,11 @@ img{
     }
     .menu-footer{
         width: 100%;
+/*         display: flex;
+        flex-wrap: wrap; */
     }
     .menu-footer a{
-        font-size: 12px;
-        padding: .6rem 1rem;
+        padding: .6rem .6rem;
     }
     .termos-container{
         width: 100%;
@@ -515,7 +559,4 @@ img{
         display: flex;
         justify-content: space-between;
     }
-    .dias-de-la-semana:hover{
-        color: orangered;
-    } */
 }

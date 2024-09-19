@@ -1,98 +1,156 @@
 [
   {
-    "nombre": "Honda CB 500F",
+    "nombre": "mh vince 125cc",
     "descripcion": "aqui va una breve descripcion del vehiculo",
     "tipo": "moto",
     "fianza": 300,
     "precio": 50,
-    "foto": "https://silesmotos.com/img/cms/Motos/HONDA/500-cbf-2024/01.png"
+    "foto":{
+      "1": "/img/motos/mh_vince_125.jpg",
+      "2": "/img/motos/mh_vince_125_1.jpg"
+  }
   },
   {
-    "nombre": "Yamaha MT-07",
+    "nombre": "piagio bervely 125cc",
     "descripcion": "aqui va una breve descripcion del vehiculo",
     "tipo": "moto",
     "fianza": 300,
     "precio": 50,
-    "foto": "https://cdn.pixabay.com/photo/2021/10/11/12/03/motorcycle-6700442_960_720.png"
+    "foto":{
+      "1": "/img/motos/piaggio_bervely_125.jpg",
+      "2": "/img/motos/piaggio_bervely_125_1.jpg"
+  }
   },
   {
-    "nombre": "Yamaha MT-07",
+    "nombre": "sym jet 14 125cc",
     "descripcion": "aqui va una breve descripcion del vehiculo",
     "tipo": "moto",
     "fianza": 300,
     "precio": 50,
-    "foto": "https://storage.kawasaki.eu/public/kawasaki.eu/en-EU/model/22MY_Z900_BK1_STU__1_.png"
+    "foto":{
+      "1": "/img/motos/sym_jet_14_125.jpg",
+      "2": "/img/motos/sym_jet_14_125_1.jpg"
+  }
   },
   {
-    "nombre": "Yamaha MT-07",
+    "nombre": "benelli trk 502",
     "descripcion": "aqui va una breve descripcion del vehiculo",
     "tipo": "moto",
     "fianza": 300,
     "precio": 50,
-    "foto": "https://pueyrredonmotos.com/wp-content/uploads/2022/01/AZUL-A.png"
+    "foto":{
+      "1": "/img/motos/benelli_trk_502.webp",
+      "2": "/img/motos/benelli_trk_502_1.webp"
+  }
   },
   {
-    "nombre": "Yamaha MT-07",
+    "nombre": "sym symphony sr 125",
     "descripcion": "aqui va una breve descripcion del vehiculo",
     "tipo": "moto",
     "fianza": 300,
     "precio": 50,
-    "foto": "https://www.moto1pro.com/sites/default/files/bmw-f-850-gs-rallye-2020.jpg"
+    "foto":{
+      "1": "/img/motos/sym_symphony_125_sr.jpg",
+      "2": "/img/motos/sym_symphony_125_sr_1.jpg"
+  }
   },
   {
-    "nombre": "Yamaha MT-07",
+    "nombre": "suzuki burgman 125",
     "descripcion": "aqui va una breve descripcion del vehiculo",
     "tipo": "moto",
     "fianza": 300,
     "precio": 50,
-    "foto": "https://e7.pngegg.com/pngimages/146/148/png-clipart-suzuki-gsx-series-motorcycle-car-suzuki-gsx-s1000-suzuki-car-motorcycle.png"
+    "foto":{
+      "1": "/img/motos/suzuki_burgman_125.jpg",
+      "2": "/img/motos/suzuki_burgman_125_1.jpg"
+  }
   },
   {
-    "nombre": "Yamaha MT-07",
+    "nombre": "kymco k-xct 125",
     "descripcion": "aqui va una breve descripcion del vehiculo",
     "tipo": "moto",
     "fianza": 300,
     "precio": 50,
-    "foto": "https://static.wixstatic.com/media/b4a6cf_56cffd23c2ea4f9891e9ec70e8e202f4~mv2.png/v1/fill/w_480,h_479,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/b4a6cf_56cffd23c2ea4f9891e9ec70e8e202f4~mv2.png"
+    "foto":{
+      "1": "/img/motos/kymco_k-xct_125.jpg",
+      "2": "/img/motos/kymco_k-xct__125_1.jpg"
+  }
   },
   {
-    "nombre": "Yamaha MT-07",
+    "nombre": "yamaha n-max 125",
     "descripcion": "aqui va una breve descripcion del vehiculo",
     "tipo": "moto",
     "fianza": 300,
     "precio": 50,
-    "foto": "https://www.centralfloridapowersports.com/cdn/shop/files/2024_Yamaha_TRACER-9_GT_Plus_Sport_Touring_Motorcycle_Central_Florida_PowerSports_1.png?v=1703011537"
+    "foto":{
+      "1": "/img/motos/yamaha_n-max_125.jpg",
+      "2": "/img/motos/yamaha_n-max__125_1.jpg"
+  }
   },
   {
-    "nombre": "Bicicleta de Montanha X2",
+    "nombre": "peugeot tweet gt 50",
+    "descripcion": "aqui va una breve descripcion del vehiculo",
+    "tipo": "moto",
+    "fianza": 300,
+    "precio": 50,
+    "foto":{
+      "1": "/img/motos/peugeot_tweet_50_gt.jpg",
+      "2": "/img/motos/peugeot_tweet_50_gt_1.jpg"
+  }
+  },
+  {
+    "nombre": "daelim s3 125",
+    "descripcion": "aqui va una breve descripcion del vehiculo",
+    "tipo": "moto",
+    "fianza": 300,
+    "precio": 50,
+    "foto":{
+      "1": "/img/motos/daelim_s3_125.jpg",
+      "2": "/img/motos/daelim_s3_125_1.jpeg"
+  }
+  },
+  {
+    "nombre": "Bicicleta de Montanha",
     "descripcion": "aqui va una breve descripcion del vehiculo",
     "tipo": "bicicleta",
     "fianza": 300,
     "precio": 50,
-    "foto": "https://ktm-bike.pt/resources/medias/shop/products/thumbnails/shop-image-large/3f489c4513b7383854a0d26fc8d0aa23.jpg"
+   "foto":{
+      "1": "/img/motos/daelim_s3_125.jpg",
+      "2": "/img/motos/daelim_s3_125_1.jpeg"
+  }
   },
   {
-    "nombre": "Bicicleta de Montanha X2",
+    "nombre": "Bicicleta de Montanha",
     "descripcion": "aqui va una breve descripcion del vehiculo",
     "tipo": "bicicleta",
     "fianza": 300,
     "precio": 50,
-    "foto": "https://pernalonga.pt/wp-content/uploads/2023/04/5.001.jpeg"
+    "foto":{
+      "1": "/img/motos/daelim_s3_125.jpg",
+      "2": "/img/motos/daelim_s3_125_1.jpeg"
+  }
   },
   {
-    "nombre": "Bicicleta de Montanha X2",
+    "nombre": "Bicicleta de Montanha",
     "descripcion": "aqui va una breve descripcion del vehiculo",
     "tipo": "bicicleta",
     "fianza": 300,
     "precio": 50,
-    "foto": "https://www.unibanco.pt/blog/wp-content/uploads/sites/3/2021/08/ST100-1200x800.jpg"
+    "foto":{
+      "1": "/img/motos/daelim_s3_125.jpg",
+      "2": "/img/motos/daelim_s3_125_1.jpeg"
+  }
   },
   {
-    "nombre": "Bicicleta de Montanha X2",
+    "nombre": "Bicicleta de Montanha",
     "descripcion": "aqui va una breve descripcion del vehiculo",
     "tipo": "bicicleta",
     "fianza": 300,
     "precio": 50,
-    "foto": "https://contents.mediadecathlon.com/p2623169/k$716ba93a19e7764f18dc1d7ff95624e0/sq/8732640.jpg?format=auto&f=800x0"
+    "foto":{
+      "1": "/img/motos/daelim_s3_125.jpg",
+      "2": "/img/motos/daelim_s3_125_1.jpeg"
+  }
   }
 ]

@@ -1,21 +1,21 @@
 import React, { useState } from "react";
-//import dataBicis from '../../../bicis.json';
 import data from "../../../data.json";
 import imagenes from "../../../backgroundIMG.json";
-//import './Slideshow.css';  // Certifique-se de ter o arquivo CSS
 
 const images = imagenes;
-
 const motos = data.filter((item) => item.tipo === "moto");
 const bicicletas = data.filter((item) => item.tipo === "bicicleta");
-//const bicis = dataBicis;
-
-// Variable para modificar el título del tipo de vehículos
-let vehiculo = "Vehículos";
 
 function HomePage() {
+  const whatsappNumber = "+34671222750";
+
   const [slideIndex, setSlideIndex] = useState(1);
   const [show, setShow] = useState("moto");
+  const [currentImageIndexes, setCurrentImageIndexes] = useState(
+    new Array(motos.length).fill(0)
+  );
+  const [fechaInicio, setFechaInicio] = useState("");
+  const [fechaTermino, setFechaTermino] = useState("");
 
   const plusSlides = (n) => {
     let newIndex = slideIndex + n;
@@ -33,51 +33,52 @@ function HomePage() {
 
   const handleShowMotos = () => {
     setShow("motos");
-    vehiculo = "Motocicletas";
   };
 
   const handleShowBicicletas = () => {
     setShow("bicicletas");
-    vehiculo = "Bicicletas";
+  };
+
+  const handleNextPhoto = (index, photos) => {
+    setCurrentImageIndexes((prevIndexes) => {
+      const newIndexes = [...prevIndexes];
+      newIndexes[index] = prevIndexes[index] === photos.length - 1 ? 0 : prevIndexes[index] + 1;
+      return newIndexes;
+    });
+  };
+
+  const handlePreviousPhoto = (index, photos) => {
+    setCurrentImageIndexes((prevIndexes) => {
+      const newIndexes = [...prevIndexes];
+      newIndexes[index] = prevIndexes[index] === 0 ? photos.length - 1 : prevIndexes[index] - 1;
+      return newIndexes;
+    });
   };
 
   const itemsToShow = show === "motos" ? motos : bicicletas;
 
   return (
     <>
+      {/* Slideshow principal */}
       <div className="slideshow-container">
         {images.map((image, index) => (
           <div
             key={index}
-            className={`mySlides fade ${
-              slideIndex === index + 1 ? "active" : ""
-            }`}
+            className={`mySlides fade ${slideIndex === index + 1 ? "active" : ""}`}
             style={{ display: slideIndex === index + 1 ? "block" : "none" }}
           >
-            {/* <div className="numbertext">{index + 1} / {images.length}</div> */}
-            <img
-              className="img-head"
-              src={image.src}
-              alt={`Slide ${index + 1}`}
-            />
-            {/* <div className="text">{image.caption}</div> */}
-
-            {/* Dots inside the image */}
+            <img className="img-head" src={image.src} alt={`Slide ${index + 1}`} />
             <div className="dots-container">
               {images.map((_, dotIndex) => (
                 <span
                   key={dotIndex}
-                  className={`dot ${
-                    slideIndex === dotIndex + 1 ? "active" : ""
-                  }`}
+                  className={`dot ${slideIndex === dotIndex + 1 ? "active" : ""}`}
                   onClick={() => currentSlide(dotIndex + 1)}
                 ></span>
               ))}
             </div>
           </div>
         ))}
-
-        {/* Next and previous buttons */}
         <a className="prev" onClick={() => plusSlides(-1)}>
           &#10094;
         </a>
@@ -86,30 +87,89 @@ function HomePage() {
         </a>
       </div>
 
+      {/* Exibição de veículos */}
       <div className="disp-container">
-        <h2>{vehiculo} disponibles</h2>
+        <h2>{show === "motos" ? "Motocicletas" : "Bicicletas"} disponibles</h2>
         <div className="selector-vehiculos">
           <button className="button-motos" onClick={handleShowMotos}>
             Motos
           </button>
           <button className="button-bicis" onClick={handleShowBicicletas}>
-            Bicis
+            Bicicletas
           </button>
         </div>
 
         <div className="container">
-          {itemsToShow.map((item, index) => (
-            <div className="card" key={index}>
-              <img className="img-disp" src={item.foto} alt={item.nombre} />
-              <div className="info-card">
-                <h3 className="h3-disp">{item.nombre}</h3>
-                <p className="km-disp">Descripción: {item.descripcion} </p>
-                <p className="price-disp">Fianza: {item.fianza} €</p>
-                <p className="price-disp">Precio: {item.precio} €</p>
+          {itemsToShow.map((item, index) => {
+            const photos = Object.values(item.foto);
+
+            return (
+              <div className="card" key={index}>
+                <div className="image-container">
+                  <img
+                    className="img-disp"
+                    src={photos[currentImageIndexes[index]]}
+                    alt={item.nombre}
+                  />
+                  {photos.length > 1 && (
+                    <div className="image-controls">
+                      <button
+                        onClick={() => handlePreviousPhoto(index, photos)}
+                        className="btn-control"
+                      >
+                        &#10094;
+                      </button>
+                      <button
+                        onClick={() => handleNextPhoto(index, photos)}
+                        className="btn-control"
+                      >
+                        &#10095;
+                      </button>
+                    </div>
+                  )}
+                </div>
+                <div className="info-card">
+                  <h3 className="h3-disp">{item.nombre}</h3>
+
+                  <div className="fecha-container">
+                    <label htmlFor={`fechaInicio-${index}`}>Fecha de inicio:</label>
+                    <input
+                      type="date"
+                      id={`fechaInicio-${index}`}
+                      value={fechaInicio}
+                      onChange={(e) => setFechaInicio(e.target.value)}
+                      required
+                    />
+                    <label htmlFor={`fechaTermino-${index}`}>Fecha de termino:</label>
+                    <input
+                      type="date"
+                      id={`fechaTermino-${index}`}
+                      value={fechaTermino}
+                      onChange={(e) => setFechaTermino(e.target.value)}
+                      required
+                    />
+                  </div>
+
+                  <p className="price-disp">Fianza: {item.fianza} €</p>
+                  <p className="price-disp">Precio: {item.precio} €</p>
+                </div>
+                <div className="button-container">
+                  <a
+                    className="btn-disp"
+                    href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
+                      `Hola, me gustaría saber más sobre el ${item.nombre}.
+                      Fecha de inicio: ${fechaInicio}
+                      Fecha de término: ${fechaTermino}`
+                    )}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Reservar
+                  </a>
+                </div>
               </div>
-              <button className="btn-disp">Reservar</button>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </>
