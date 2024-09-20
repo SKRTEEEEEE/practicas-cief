@@ -27,7 +27,7 @@ function Contacto() {
                     </div>
                     <div className="mapa">
                         <a href="https://maps.app.goo.gl/UH9Q6hvPZvU4yzN87" target="_blank" rel="noopener noreferrer">
-                            <img src="../../../public/img/map_moto2Go.png" alt="" />
+                            <img src="../../../img/map_moto2Go.png" alt="" />
                         </a>
                     </div>
                 </div>
