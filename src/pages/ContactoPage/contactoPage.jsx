@@ -14,22 +14,29 @@ function Contacto() {
         <div>
             <HeaderComp />
             <section className='contacto-page'>
-                <div className='teste'>
+                <div className='container-title'>
                     <h2 className='h2-class'>Contato</h2>
                 </div>
-                
-                <div className="contacto-ubicacion">
-                    <h3 className='h3-footer'>donde encontranos</h3>
-                    <p>endereco: Plaza España, 25, 08870 Sitges, Barcelona</p>
-                    <p>telefono: +34611788889 <a className='a-whats' href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`} target='_blank' rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i></a></p>
-                    <p>email: email@email.com</p>
+
+                <div className="container-ubicacion">
+                    <div className="contacto-ubicacion">
+                        <h3>dónde encontrarnos</h3>
+                        <p>dirección: Plaza España, 25, 08870 Sitges, Barcelona {/* <span><a href={redirtectToMap} target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-map-pin"></i></a></span> */}</p>
+                        <p>teléfono: +34611788889 {/* <a className='a-whats' href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`} target='_blank' rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i></a> */}</p>
+                        <p>correo electrónico: email@email.com</p>
+                    </div>
+                    <div className="mapa">
+                        <a href="https://maps.app.goo.gl/UH9Q6hvPZvU4yzN87" target="_blank" rel="noopener noreferrer">
+                            <img src="../../../img/map_moto2Go.png" alt="" />
+                        </a>
+                    </div>
                 </div>
-                <APIProvider apiKey="AIzaSyDsdw3Jt90NOor9eGU9oeusrRp1d3wuJt8">
+                {/* <APIProvider apiKey="AIzaSyDsdw3Jt90NOor9eGU9oeusrRp1d3wuJt8">
                     <div className="mapa">
                         <Map zoom={19} center={position}></Map>
                     </div>
-                </APIProvider>
-                    
+                </APIProvider> */}
+
             </section>
         </div>
 
