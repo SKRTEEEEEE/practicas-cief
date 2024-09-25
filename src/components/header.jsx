@@ -13,7 +13,7 @@ function Header() {
     <nav>
       <div className='logo-nav'>
         <Link to='/'>
-        <img src="../img/moto2go_clear.png" alt="" srcset="" />
+        <img src="../img/moto2go_clear.png" alt="" srcSet="" />
         </Link>
       </div>
 
