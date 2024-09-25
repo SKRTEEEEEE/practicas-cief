@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { APIProvider, Map } from '@vis.gl/react-google-maps';
 import HeaderComp from '../../components/header'
+import Footer from '../../components/footer';
 //import data from '../../../apiKey.json'
 import './contactoPage.css'
 
@@ -15,7 +16,7 @@ function Contacto() {
             <HeaderComp />
             <section className='contacto-page'>
                 <div className='container-title'>
-                    <h2 className='h2-class'>Contato</h2>
+                    <h2 className='h2-class'>Contacto</h2>
                 </div>
 
                 <div className="container-ubicacion">
@@ -38,6 +39,7 @@ function Contacto() {
                 </APIProvider> */}
 
             </section>
+            <Footer/>
         </div>
 
     );

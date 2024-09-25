@@ -8,6 +8,7 @@ import Terms from './components/termsCond'
 import Sobre from './pages/sobreNossotros/sobreNossotrosPage'
 import Contacto from './pages/ContactoPage/contactoPage'
 import ClientePage from './pages/ClientePage/clientePage'
+import Vehiculo from './pages/vehiculo/vehiculo'
 
 function App() {
   return (
@@ -24,6 +25,9 @@ function App() {
         <Route path="/cliente" element={<ClientePage/>} />
         <Route path="/contacto" element={<Contacto/>} />
         <Route path="/terms" element={<Terms/>} />
+        <Route path="/vehiculo" element={<Vehiculo/>} />
+
+
       </Routes>
       
     </Router>
