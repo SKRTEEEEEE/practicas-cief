@@ -1,5 +1,6 @@
 // import { Link } from "react-router-dom";
 import { formatDate } from "../helpers/formatDate";
+import { Link } from "react-router-dom";
 
 export const ContainerCards = ({
   whatsappNumber,
@@ -91,14 +92,18 @@ export const ContainerCards = ({
                 >
                   Reservar
                 </a>
-                <a
+                <Link to="/vehiculo"
+                className="btn-disp">
+                Detalles
+                </Link>
+                {/* <a
                   className="btn-disp"
                   href="/vehiculo"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   Detalles
-                </a>
+                </a> */}
               </div>
             </div>
           );
