@@ -119,6 +119,7 @@ function HomePage() {
           handleFechaInicioChange={handleFechaInicioChange}
           handleFechaTerminoChange={handleFechaTerminoChange}
         />
+
       </div>
     </>
   );
