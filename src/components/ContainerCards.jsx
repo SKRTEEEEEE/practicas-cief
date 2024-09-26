@@ -1,6 +1,7 @@
 // import { Link } from "react-router-dom";
+import { useState } from "react";
 import { formatDate } from "../helpers/formatDate";
-import { Link } from "react-router-dom";
+import "../../public/css/VehicleCard.css";
 
 export const ContainerCards = ({
   whatsappNumber,
@@ -12,6 +13,10 @@ export const ContainerCards = ({
   handleFechaInicioChange,
   handleFechaTerminoChange,
 }) => {
+  const [selectedVehicle, setSelectedVehicle] = useState(null);
+  const handleCardClick = (vehicle) => setSelectedVehicle(vehicle);
+  const closePopup = () => setSelectedVehicle(null);
+
   return (
     <>
       <div className="container">
@@ -92,22 +97,30 @@ export const ContainerCards = ({
                 >
                   Reservar
                 </a>
-                <Link to="/vehiculo"
-                className="btn-disp">
-                Detalles
-                </Link>
-                {/* <a
-                  className="btn-disp"
-                  href="/vehiculo"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
+                <a className="btn-disp" onClick={() => handleCardClick(item)}>
                   Detalles
-                </a> */}
+                </a>
               </div>
             </div>
           );
         })}
+        {/*  ------------------ Aqui va el popup junto con un condicional ---------------------- */}
+        {selectedVehicle && (
+          <div className="popup">
+            <div className="popup-content">
+              <span className="close-btn" onClick={closePopup}>
+                X
+              </span>
+              <img
+                srcSet={selectedVehicle.foto["1"]}
+                alt={selectedVehicle.nombre}
+                className="popup-image"
+              />
+              <h2>{selectedVehicle.nombre}</h2>
+              <p>{selectedVehicle.descripcion.es}</p>
+            </div>
+          </div>
+        )}
       </div>
     </>
   );
