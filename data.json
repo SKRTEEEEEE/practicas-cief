@@ -10,8 +10,8 @@
     "fianza": 300,
     "precio": 50,
     "foto":{
-      "1": "/img/motos/mh_vince_125.png",
-      "2": "/img/motos/mh_vince_125_1.png"
+      "1": "/img/motos/mh_vince_125.avif",
+      "2": "/img/motos/mh_vince_125_1.avif"
   }
   },
   {
@@ -25,8 +25,8 @@
     "fianza": 300,
     "precio": 50,
     "foto":{
-      "1": "/img/motos/piaggio_bervely_125.png",
-      "2": "/img/motos/piaggio_bervely_125_1.png"
+      "1": "/img/motos/piaggio_beverly_125.avif",
+      "2": "/img/motos/piaggio_beverly_125_1.avif"
   }
   },
   {
@@ -55,8 +55,8 @@
     "fianza": 800,
     "precio": 90,
     "foto":{
-      "1": "/img/motos/benelli_trk_502.webp",
-      "2": "/img/motos/benelli_trk_502_1.webp"
+      "1": "/img/motos/benelli_trk_502_x.avif",
+      "2": "/img/motos/benelli_trk_502_x_2.png"
   }
   },
   {
@@ -115,8 +115,8 @@
     "fianza": 300,
     "precio": 50,
     "foto":{
-      "1": "/img/motos/yamaha_n-max_125.png",
-      "2": "/img/motos/yamaha_n-max_125_2.png"
+      "1": "/img/motos/yamaha_n-max_125.avif",
+      "2": "/img/motos/yamaha_n-max_125_1.avif"
   }
   },
   {
