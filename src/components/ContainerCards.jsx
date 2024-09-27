@@ -1,7 +1,8 @@
 // import { Link } from "react-router-dom";
 import { useState } from "react";
 import { formatDate } from "../helpers/formatDate";
-import "../../public/css/VehicleCard.css";
+import "../../public/css/popup.css";
+import "../../public/css/cards.css";
 
 export const ContainerCards = ({
   whatsappNumber,
@@ -16,7 +17,16 @@ export const ContainerCards = ({
   const [selectedVehicle, setSelectedVehicle] = useState(null);
   const handleCardClick = (vehicle) => setSelectedVehicle(vehicle);
   const closePopup = () => setSelectedVehicle(null);
-
+  const [selectedlanguaje, setSelectedLanguaje] = useState("es");
+  const languaje = (lang) => setSelectedLanguaje(lang);
+  const [numeroFoto, setNumeroFoto] = useState(1);
+  const fotoChange = (val) => {
+    if (val == 1) {
+      return 2
+    } else if (val == 2) {
+      return 1
+    }
+  }
   return (
     <>
       <div className="container">
@@ -27,6 +37,7 @@ export const ContainerCards = ({
           }.
           Fecha de inicio: ${formatDate(dates[`start-${index}`]) || ""}
           Fecha de término: ${formatDate(dates[`end-${index}`]) || ""}`;
+          // const [selectedlanguaje, setSelectedLanguaje] = useState("es")
 
           return (
             <div className="card" key={index}>
@@ -111,13 +122,40 @@ export const ContainerCards = ({
               <span className="close-btn" onClick={closePopup}>
                 X
               </span>
-              <img
-                srcSet={selectedVehicle.foto["1"]}
-                alt={selectedVehicle.nombre}
-                className="popup-image"
-              />
+              <div className="control-image-popup">
+                <button
+                  onClick={() => setNumeroFoto(fotoChange(numeroFoto))}
+                  className="btn-control"
+                >
+                  &#10094;
+                </button>
+
+                <img
+                  srcSet={selectedVehicle.foto[numeroFoto]}
+                  alt={selectedVehicle.nombre}
+                  className="popup-image"
+                />
+
+                <button
+                  onClick={() => setNumeroFoto(fotoChange(numeroFoto))}
+                  className="btn-control"
+                >
+                  &#10095;
+                </button>
+              </div>
+
               <h2>{selectedVehicle.nombre}</h2>
-              <p>{selectedVehicle.descripcion.es}</p>
+              <p>{selectedVehicle.descripcion[selectedlanguaje]}</p>
+              <div className="botones-lang"></div>
+              <button className="btn-lang" onClick={() => languaje("es")}>
+                ES
+              </button>
+              <button className="btn-lang" onClick={() => languaje("en")}>
+                EN
+              </button>
+              <button className="btn-lang" onClick={() => languaje("fr")}>
+                FR
+              </button>
             </div>
           </div>
         )}
