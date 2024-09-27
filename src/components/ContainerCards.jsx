@@ -1,4 +1,3 @@
-// import { Link } from "react-router-dom";
 import { useState } from "react";
 import { formatDate } from "../helpers/formatDate";
 import "../../public/css/popup.css";
@@ -17,16 +16,15 @@ export const ContainerCards = ({
   const [selectedVehicle, setSelectedVehicle] = useState(null);
   const handleCardClick = (vehicle) => setSelectedVehicle(vehicle);
   const closePopup = () => setSelectedVehicle(null);
-  const [selectedlanguaje, setSelectedLanguaje] = useState("es");
-  const languaje = (lang) => setSelectedLanguaje(lang);
+  const [selectedLanguage, setSelectedLanguage] = useState("es");
+  const changeLanguage = (lang) => setSelectedLanguage(lang);
   const [numeroFoto, setNumeroFoto] = useState(1);
+
   const fotoChange = (val) => {
-    if (val == 1) {
-      return 2
-    } else if (val == 2) {
-      return 1
-    }
-  }
+    const totalFotos = selectedVehicle?.foto.length || 0;
+    return (val + 1) % totalFotos;
+  };
+
   return (
     <>
       <div className="container">
@@ -37,7 +35,6 @@ export const ContainerCards = ({
           }.
           Fecha de inicio: ${formatDate(dates[`start-${index}`]) || ""}
           Fecha de término: ${formatDate(dates[`end-${index}`]) || ""}`;
-          // const [selectedlanguaje, setSelectedLanguaje] = useState("es")
 
           return (
             <div className="card" key={index}>
@@ -115,7 +112,7 @@ export const ContainerCards = ({
             </div>
           );
         })}
-        {/*  ------------------ Aqui va el popup junto con un condicional ---------------------- */}
+        {/* Popup for selected vehicle */}
         {selectedVehicle && (
           <div className="popup">
             <div className="popup-content">
@@ -145,17 +142,18 @@ export const ContainerCards = ({
               </div>
 
               <h2>{selectedVehicle.nombre}</h2>
-              <p>{selectedVehicle.descripcion[selectedlanguaje]}</p>
-              <div className="botones-lang"></div>
-              <button className="btn-lang" onClick={() => languaje("es")}>
-                ES
-              </button>
-              <button className="btn-lang" onClick={() => languaje("en")}>
-                EN
-              </button>
-              <button className="btn-lang" onClick={() => languaje("fr")}>
-                FR
-              </button>
+              <p>{selectedVehicle.descripcion[selectedLanguage]}</p>
+              <div className="botones-lang">
+                <button className="btn-lang" onClick={() => changeLanguage("es")}>
+                  ES
+                </button>
+                <button className="btn-lang" onClick={() => changeLanguage("en")}>
+                  EN
+                </button>
+                <button className="btn-lang" onClick={() => changeLanguage("fr")}>
+                  FR
+                </button>
+              </div>
             </div>
           </div>
         )}
