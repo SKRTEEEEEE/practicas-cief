@@ -106,7 +106,7 @@ export const ContainerCards = ({
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Reservar
+                  Reservar <img className="icono-wsp" srcSet="../../public/img/icons8-whatsapp.svg" alt="icono whatsapp" />
                 </a>
                 <a className="btn-disp" onClick={() => handleCardClick(item)}>
                   Detalles
