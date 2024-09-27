@@ -64,6 +64,13 @@
   background-color: black;
 }
 
+.popup-btn-control {
+  
+  color: black;
+  border: 0;
+  background-color: white;
+}
+
 /* --------------------------- Medias -------------------------- */
 @media (max-width: 1068px) {
 

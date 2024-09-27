@@ -21,8 +21,14 @@ export const ContainerCards = ({
   const [numeroFoto, setNumeroFoto] = useState(1);
 
   const fotoChange = (val) => {
-    const totalFotos = selectedVehicle?.foto.length || 0;
-    return (val + 1) % totalFotos;
+    if (val < selectedVehicle.foto.lenght) {
+    }
+    const totalFotos = Object.keys(selectedVehicle?.foto || {}).length;
+    if (val < totalFotos) {
+      return val + 1;
+    } else {
+      return 1;
+    }
   };
 
   return (
@@ -103,7 +109,12 @@ export const ContainerCards = ({
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Reservar <img className="icono-wsp" srcSet="../../public/img/icons8-whatsapp.svg" alt="icono whatsapp" />
+                  Reservar{" "}
+                  <img
+                    className="icono-wsp"
+                    srcSet="../../public/img/icons8-whatsapp.svg"
+                    alt="icono whatsapp"
+                  />
                 </a>
                 <a className="btn-disp" onClick={() => handleCardClick(item)}>
                   Detalles
@@ -122,7 +133,7 @@ export const ContainerCards = ({
               <div className="control-image-popup">
                 <button
                   onClick={() => setNumeroFoto(fotoChange(numeroFoto))}
-                  className="btn-control"
+                  className="popup-btn-control"
                 >
                   &#10094;
                 </button>
@@ -135,7 +146,7 @@ export const ContainerCards = ({
 
                 <button
                   onClick={() => setNumeroFoto(fotoChange(numeroFoto))}
-                  className="btn-control"
+                  className="popup-btn-control"
                 >
                   &#10095;
                 </button>
@@ -144,13 +155,22 @@ export const ContainerCards = ({
               <h2>{selectedVehicle.nombre}</h2>
               <p>{selectedVehicle.descripcion[selectedLanguage]}</p>
               <div className="botones-lang">
-                <button className="btn-lang" onClick={() => changeLanguage("es")}>
+                <button
+                  className="btn-lang"
+                  onClick={() => changeLanguage("es")}
+                >
                   ES
                 </button>
-                <button className="btn-lang" onClick={() => changeLanguage("en")}>
+                <button
+                  className="btn-lang"
+                  onClick={() => changeLanguage("en")}
+                >
                   EN
                 </button>
-                <button className="btn-lang" onClick={() => changeLanguage("fr")}>
+                <button
+                  className="btn-lang"
+                  onClick={() => changeLanguage("fr")}
+                >
                   FR
                 </button>
               </div>
