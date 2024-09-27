@@ -6,6 +6,10 @@
   margin-bottom: 2rem;
 }
 
+.icono-wsp {
+  width: 25px;
+}
+
 .image-container {
   display: flex;
   flex-direction: column;
@@ -62,7 +66,8 @@ input {
 .btn-control {
   background-color: transparent;
   border: none;
-  color: transparent;
+  color: black;
+  width: 15px;
 }
 
 /* Conteúdo textual da card */
@@ -87,6 +92,10 @@ label {
   text-decoration: none;
 }
 .btn-disp {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
   padding: 10px 20px;
   margin: 7px;
   background-color: #000000;
@@ -95,6 +104,7 @@ label {
   border-radius: 5px;
   cursor: pointer;
   transition: 0.3s;
+  width: 40%;
 }
 .btn-disp:hover {
   scale: 1.1;
@@ -139,5 +149,9 @@ label {
   label {
     font-size: 0.8rem;
     margin-top: 5px;
+  }
+
+  .icono-wsp {
+    width: 20px;
   }
 }

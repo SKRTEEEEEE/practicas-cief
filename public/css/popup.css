@@ -34,6 +34,7 @@
 .popup-image {
   width: 80%;
   height: auto;
+  padding-bottom: 30px;
 }
 
 .close-btn {
@@ -61,6 +62,13 @@
   scale: 1.1;
   color: white;
   background-color: black;
+}
+
+.popup-btn-control {
+  
+  color: black;
+  border: 0;
+  background-color: white;
 }
 
 /* --------------------------- Medias -------------------------- */
