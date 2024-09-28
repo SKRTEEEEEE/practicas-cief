@@ -112,7 +112,7 @@ export const ContainerCards = ({
                   Reservar{" "}
                   <img
                     className="icono-wsp"
-                    srcSet="../../public/img/icons8-whatsapp.svg"
+                    srcSet="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/2044px-WhatsApp.svg.png"
                     alt="icono whatsapp"
                   />
                 </a>
