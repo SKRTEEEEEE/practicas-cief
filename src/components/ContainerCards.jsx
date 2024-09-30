@@ -20,9 +20,16 @@ export const ContainerCards = ({
   const changeLanguage = (lang) => setSelectedLanguage(lang);
   const [numeroFoto, setNumeroFoto] = useState(1);
 
+  // Função para obter a data atual no formato YYYY-MM-DD
+  const getCurrentDate = () => {
+    const today = new Date();
+    const year = today.getFullYear();
+    const month = String(today.getMonth() + 1).padStart(2, '0');
+    const day = String(today.getDate()).padStart(2, '0');
+    return `${year}-${month}-${day}`;
+  };
+
   const fotoChange = (val) => {
-    if (val < selectedVehicle.foto.lenght) {
-    }
     const totalFotos = Object.keys(selectedVehicle?.foto || {}).length;
     if (val < totalFotos) {
       return val + 1;
@@ -78,10 +85,14 @@ export const ContainerCards = ({
                     type="date"
                     id={`fechaInicio-${index}`}
                     value={dates[`start-${index}`] || ""}
-                    onChange={(e) =>
-                      handleFechaInicioChange(index, e.target.value)
-                    }
+                    onChange={(e) => {
+                      const fechaInicio = e.target.value;
+                      handleFechaInicioChange(index, fechaInicio);
+                      // Define o mínimo da data de término como a data de início
+                      document.getElementById(`fechaTermino-${index}`).min = fechaInicio;
+                    }}
                     required
+                    min={getCurrentDate()} // Bloqueia datas anteriores a hoje
                   />
                   <label htmlFor={`fechaTermino-${index}`}>
                     Fecha de termino:
@@ -94,6 +105,7 @@ export const ContainerCards = ({
                       handleFechaTerminoChange(index, e.target.value)
                     }
                     required
+                    min={dates[`start-${index}`] || getCurrentDate()} // A data de término deve ser posterior à de início
                   />
                 </div>
 

@@ -25,6 +25,12 @@ function Contacto() {
                         <p>dirección: Plaza España, 25, 08870 Sitges, Barcelona {/* <span><a href={redirtectToMap} target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-map-pin"></i></a></span> */}</p>
                         <p>teléfono: +34611788889 {/* <a className='a-whats' href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`} target='_blank' rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i></a> */}</p>
                         <p>correo electrónico: email@email.com</p>
+                        <br />
+                        <br />
+                        <br />
+                        <p>dirección: Plaza España, 25, 08870 Sitges, Barcelona {/* <span><a href={redirtectToMap} target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-map-pin"></i></a></span> */}</p>
+                        <p>teléfono: +34611788889 {/* <a className='a-whats' href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`} target='_blank' rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i></a> */}</p>
+                        <p>correo electrónico: email@email.com</p>
                     </div>
                     <div className="mapa">
                         <a href="https://maps.app.goo.gl/UH9Q6hvPZvU4yzN87" target="_blank" rel="noopener noreferrer">
