@@ -6,6 +6,7 @@ import { ContainerCards } from "../../components/ContainerCards";
 function HomePage() {
   const [slideIndex, setSlideIndex] = useState(1);
   const [show, setShow] = useState("motos"); // Estado para iniciar mostrando las motos
+  //Recoje las fechas como un estado ℹ️
   const [dates, setDates] = useState({}); // Estado para armazenar datas por índice
   const itemsToShow = show === "motos" ? motos : bicicletas;
   const [currentImageIndexes, setCurrentImageIndexes] = useState(
