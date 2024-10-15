@@ -1,6 +1,5 @@
 // Esto al final no se utilizara
 
-import React, { useState } from "react";
 import HeaderComp from "../../components/header";
 import Footer from "../../components/footer";
 import "../../../public/css/vehiculo.css";

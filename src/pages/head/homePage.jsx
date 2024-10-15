@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { images, motos, bicicletas } from "../../helpers/fetchVehiculos";
-import { whatsappNumber } from "../../helpers/numeroWhatsapp";
 import { ContainerCards } from "../../components/ContainerCards";
+
+const whatsappNumber = "+34671222750";
 
 function HomePage() {
   const [slideIndex, setSlideIndex] = useState(1);

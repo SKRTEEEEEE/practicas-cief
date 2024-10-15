@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 import Footer from '../../components/footer';
 import HeaderComp from '../../components/header'
 import './sobreNossostrosPage.css'

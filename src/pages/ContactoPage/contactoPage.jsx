@@ -1,15 +1,15 @@
-import React, { useState } from 'react';
-import { APIProvider, Map } from '@vis.gl/react-google-maps';
+// import React, { useState } from 'react';
+// import { APIProvider, Map } from '@vis.gl/react-google-maps';
 import HeaderComp from '../../components/header'
 import Footer from '../../components/footer';
 //import data from '../../../apiKey.json'
 import './contactoPage.css'
 
 function Contacto() {
-    const position = { lat: 41.23635632831617, lng: 1.8056280831165197 };
-    //const [open, setOpen] = useState(false)
-    const whatsappNumber = +34611788889;
-    const whatsappMessage = 'Hola, me gustaría saber más sobre sus servicios.';
+    // const position = { lat: 41.23635632831617, lng: 1.8056280831165197 };
+    // //const [open, setOpen] = useState(false)
+    // const whatsappNumber = +34611788889;
+    // const whatsappMessage = 'Hola, me gustaría saber más sobre sus servicios.';
     //const dataJson = data;
     return (
         <div>

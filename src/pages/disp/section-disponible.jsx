@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+// import React, { useState } from 'react';
 //import './Slideshow.css';  // Certifique-se de ter o arquivo CSS
 
 const motos = [
